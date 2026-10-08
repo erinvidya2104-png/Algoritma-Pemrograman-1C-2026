@@ -1,0 +1,143 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 64,
+      "y": 186,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "text": "uang=200000;\ndiskon=0.10;\nPPN=0.11",
+      "x": 272,
+      "y": 184,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "text": "jumlah_buku=3;\njumlah_pulpen=2;\njumlah_flashdisk=1",
+      "x": 515,
+      "y": 187,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 4,
+      "type": "input",
+      "text": "harga_buku=25000;\nharga_pulpen=8000;\nharga_flashdisk=75000",
+      "x": 754,
+      "y": 184,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 5,
+      "type": "process",
+      "text": "total_harga_buku=harga_buku*jumlah_buku;\ntotal_harga_pulpen=harga_pulpen*jumlah_pulpen;\ntotal_harga_flashdisk=harga_flashdisk*jumlah_flashdisk",
+      "x": 762,
+      "y": 322,
+      "w": 180,
+      "h": 190
+    },
+    {
+      "id": 6,
+      "type": "process",
+      "text": "total_belanja=total_harga_buku+total_harga_pulpen+total_harga_flashdisk",
+      "x": 766,
+      "y": 555,
+      "w": 180,
+      "h": 190
+    },
+    {
+      "id": 7,
+      "type": "process",
+      "text": "harga_diskon=total_belanja*diskon;\ntotal_harga_diskon=total_belanja-harga_diskon",
+      "x": 765,
+      "y": 813,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 8,
+      "type": "process",
+      "text": "harga_PPN=PPN*total_harga_diskon;\ntotal_pembayaran=total_harga_diskon+harga_PPN",
+      "x": 755,
+      "y": 1009,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 10,
+      "type": "process",
+      "text": "kembalian=uang-total_pembayaran",
+      "x": 753,
+      "y": 1149,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 11,
+      "type": "end",
+      "text": "End",
+      "x": 546,
+      "y": 1151,
+      "w": 150,
+      "h": 58
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "branch": null
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "branch": null
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "branch": null
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "branch": null
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "branch": null
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "branch": null
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "branch": null
+    },
+    {
+      "from": 8,
+      "to": 10,
+      "branch": null
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "branch": null
+    }
+  ],
+  "nextId": 12
+}
